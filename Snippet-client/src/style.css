@@ -1,0 +1,71 @@
+/* Resetting margins, paddings, and borders */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Resetting list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Resetting anchor text decoration */
+a {
+  text-decoration: none;
+}
+
+/* Resetting heading margins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Resetting paragraph margin */
+p {
+  margin: 0;
+}
+
+
+body {
+  background: #f8f8ff;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 14px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 15px;
+}
+
+.wrapper {
+  background-color: #222239;
+  box-shadow: 0 5px 10px rgba(128, 113, 113, 0.25);
+  margin: 20px auto;
+  width: 26.8%;
+  padding: 20px;
+  border-radius: 5px;
+  height: auto;
+}
+
+button {
+  background: #aa2659;
+  border-radius: 50px;
+  border: 2px solid rgb(62, 169, 158);
+  color: #fefefe;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px 0px;
+  cursor: pointer;
+  display: inline;
+}
