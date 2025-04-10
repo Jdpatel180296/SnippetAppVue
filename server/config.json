@@ -1,6 +1,6 @@
 {
-    "username": "",
-    "password": "",
-    "projectname":"",
-    "jwt_secrect" :""
+    "username": "jaydeep9gondaliya",
+    "password": "JDmongo32",
+    "projectname":"SnippetApp",
+    "jwt_secrect" :"123456"
 }
