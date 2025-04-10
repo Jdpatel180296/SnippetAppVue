@@ -2,7 +2,7 @@ const router = require("express").Router();
 
 const controller = require("./users.controller");
 
-const authorization = require("../Middleware/Authorization");
+const authorization = require("../Middleware/authorization");
 // get all users
 router.get("/", controller.getusers);
 

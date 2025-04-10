@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 const controller = require("./snippets.controller");
-const authorization = require("../Middleware/Authorization");
+const authorization = require("../Middleware/authorization");
 router.get("/", controller.getSnippets);
 
 router.get("/:id", controller.getSnippetbyId);
