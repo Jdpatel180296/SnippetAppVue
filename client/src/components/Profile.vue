@@ -69,7 +69,7 @@ export default {
 
         try {
             const response = await axios.get(
-                `http://localhost:8080/users/${id}?bookmarks=true&&snippets=true`
+                `https://snippetappvue.onrender.com/users/${id}?bookmarks=true&&snippets=true`
             );
 
             this.user = response.data;

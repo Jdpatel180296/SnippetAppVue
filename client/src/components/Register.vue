@@ -70,7 +70,7 @@ export default {
                 user.programming_languages = this.user.programming_languages.split(',');
 
                 const response = await axios.post(
-                    'http://localhost:8080/users/register',
+                    'https://snippetappvue.onrender.com/users/register',
                     user
                 );
                 console.log(response.data);
