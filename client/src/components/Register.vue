@@ -10,40 +10,16 @@
         <!--  register  -->
         <div>
             <form class="form">
-                <div class="column">
-                    <input
-                        v-model="user.username"
-                        type="text"
-                        placeholder="Username"
-                        required="true"
-                    />
-                    <input
-                        v-model="user.password"
-                        type="password"
-                        placeholder="Password"
-                        required="true"
-                    />
-                   
-                    <input
-                        v-model="user.years_experience"
-                        type="text"
-                        placeholder="Years of Experience"
-                        default="0"
-                    />
-                    <input
-                        v-model="user.programming_languages"
-                        type="text"
-                        placeholder="Programming Languages (comma separated)"
-                    />
-                   
-                    <p class="error">{{ error }}</p>
-                    <button @click="register" type="button">Register</button>
-                    <p class="login">Already Registered?</p>
-                    <RouterLink class="login-link" to="/login">
-                        Login
-                    </RouterLink>
-                </div>
+                <input v-model="user.username" type="text" placeholder="Username" required />
+                <input v-model="user.password" type="password" placeholder="Password" required />
+                <input v-model="user.years_experience" type="text" placeholder="Years of Experience" />
+                <input v-model="user.programming_languages" type="text" placeholder="Programming Languages (comma separated)" />
+                <p class="error">{{ error }}</p>
+                <button @click="register" type="button">Register</button>
+                <p class="login">Already Registered?</p>
+                <RouterLink class="login-link" to="/login">Login</RouterLink>
             </form>
+
         </div>
     </div>
     </div>
@@ -88,69 +64,116 @@ export default {
 </script>
 
 <style scoped>
-.header {
-    text-align: center;
-    color: #f8f8ff;
-    padding-bottom: 20px;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-h1.header {
-    font-size: 18px;
+.background {
+  background-image: url('https://media.istockphoto.com/id/956291438/photo/textured-wood-wall.jpg?s=612x612&w=0&k=20&c=LDmRtz43mJGHC2-BHJUi-6I0kAcLHuPyiAfPrt3PV2Y=');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 40px 30px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  animation: fadeInUp 0.8s ease;
+  color: #fff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f8f8ff;
 }
 
 .form {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-
-.form .column {
-    flex: 1;
-    padding: 0 10px;
-}
-
 
 input {
-    font-family: 'Saira Extra Condensed', sans-serif;
-    color: #333;
-    margin-bottom: 15px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #27b8c7;
+  box-shadow: 0 0 6px rgba(39, 184, 199, 0.5);
 }
 
 button {
-    width: 100%;
-    cursor: pointer;
+  padding: 12px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.login {
-    display: flex;
-    justify-content: center;
-    color: #f8f8ff;
-}
-
-.login-link {
-    display: flex;
-    justify-content: center;
-    color: #b492ad;
-    text-decoration: underline;
+button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(to right, #5f5ae6, #8b5bb1);
 }
 
 .error {
-    display: flex;
-    justify-content: center;
-    color: #eb8b7a;
-    text-transform: uppercase;
+  text-align: center;
+  color: #ff8080;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
 }
-.background{
-    background-image: url('https://media.istockphoto.com/id/956291438/photo/textured-wood-wall.jpg?s=612x612&w=0&k=20&c=LDmRtz43mJGHC2-BHJUi-6I0kAcLHuPyiAfPrt3PV2Y=');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    margin-top: 0%;
-    height: 100vh;
-    width: 100vw;
+
+.login {
+  text-align: center;
+  color: #eee;
+  margin-top: 10px;
 }
+
+.login-link {
+  color: #ffd369;
+  text-align: center;
+  display: block;
+  margin-top: 5px;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.login-link:hover {
+  color: #fff;
+}
+
 </style>
