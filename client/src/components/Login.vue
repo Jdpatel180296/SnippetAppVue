@@ -12,15 +12,13 @@
        <!-- login -->
         <div>
         <form class="form">
-  <input v-model="user.username" type="text" placeholder="Username" />
-  <input v-model="user.password" type="password" placeholder="Password" />
-  <p class="error">{{ error }}</p>
-  <button type="button" @click="login">Login</button>
-  <p class="register">Not Registered?</p>
-  <RouterLink class="register-link" to="/register">Register Here</RouterLink>
-</form>
-
-
+            <input v-model="user.username" type="text" placeholder="Username" />
+            <input v-model="user.password" type="password" placeholder="Password" />
+            <p class="error">{{ error }}</p>
+            <button type="button" @click="login">Login</button>
+            <p class="register">Not Registered?</p>
+            <RouterLink class="register-link" to="/register">Register Here</RouterLink>
+        </form>
        </div>
     </div>
     </div>
@@ -45,15 +43,11 @@ export default {
 
             try {
                 const response = await axios.post('https://snippetappvue.onrender.com/users/login', user);
-                console.log(response.data)
-                
+
                 const token = response.headers.authorization;
-                console.log(token);
 
                 const userID = response.data._id;
-                console.log(userID);
-
-            
+                
                 //storage of authorization token
                  localStorage.setItem('authtoken', token);
                  localStorage.setItem('userID',userID);   

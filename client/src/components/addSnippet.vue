@@ -56,7 +56,7 @@ export default {
         },
       });
             
-            console.log('Snippet submitted:', this.snippet);
+            
             alert('🎉 Snippet added successfully!');
             this.snippet.title = '';
             this.snippet.programming_language = '';

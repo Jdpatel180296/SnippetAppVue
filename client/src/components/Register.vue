@@ -49,7 +49,7 @@ export default {
                     'https://snippetappvue.onrender.com/users/register',
                     user
                 );
-                console.log(response.data);
+               
 
                 // redirect after successful registrations
                 this.$router.push('/login');
